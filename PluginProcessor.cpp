@@ -29,7 +29,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout TwoKProcessor::createLayout(
     {
         juce::NormalisableRange<float> r (lo, hi, step);
         if (centre > lo && centre < hi)
-            r.setSkewForCentrePoint (centre);
+            r.setSkewForCentre (centre);
         p.push_back (std::make_unique<F> (juce::ParameterID { id, 1 }, name, r, def, Attr().withLabel (unit)));
     };
 
